@@ -8,7 +8,12 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Login")),
-      body: Text("This is login page"),
+      body: Column(
+        children: [
+          Text("This is login page"),
+          Text("This is still login page"),
+        ],
+      ),
     );
   }
 }
