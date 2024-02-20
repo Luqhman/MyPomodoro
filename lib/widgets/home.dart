@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,7 +13,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("HomePage"),),
-      body: Text("this is home page")
-    );
+      body: Center(
+        child: Text(
+            "This is homepage",
+            style: TextStyle(fontFamily: 'Lato'),
+          ),
+        )
+      );
   }
 }
