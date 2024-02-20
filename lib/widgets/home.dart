@@ -12,13 +12,54 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("HomePage"),),
-      body: Center(
-        child: Text(
-            "This is homepage",
-            style: TextStyle(fontFamily: 'Lato'),
-          ),
-        )
+      body: SafeArea(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, top: 70, bottom: 10),
+                  child: Text(
+                      "This is the left button",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 10,
+                      ),
+                  ),
+                ),
+                Expanded(
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 20, top: 70, bottom: 10),
+                      child: Text(
+                        "This is the right button",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 10,
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 40),
+              child: Center(
+                child: Text(
+                        "Hi Brownies! How are you feeling today",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        )
+                ),
+              ),
+            ),
+          ],
+        ),
+      )
+
       );
   }
 }
