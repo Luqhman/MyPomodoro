@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-// import 'package:google_fonts/google_fonts.dart';
+import 'package:pomodoro/models/nav_item_model.dart';
+import 'package:rive/rive.dart';
+
+const Color bottomNavBgColor = Color(0xFF17203A);
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -58,8 +61,32 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-      )
-
-      );
+      ),
+      bottomNavigationBar: SafeArea(
+        child: Container(
+          height: 56,
+          padding: EdgeInsets.all(12),
+          margin: EdgeInsets.symmetric(horizontal: 24, vertical: 5),
+          decoration: BoxDecoration(
+            color: bottomNavBgColor.withOpacity(0.8),
+            borderRadius: BorderRadius.all(Radius.circular(24)),
+            boxShadow: [BoxShadow(
+              color: bottomNavBgColor.withOpacity(0.3),
+              offset: Offset(0,20),
+              blurRadius: 20,
+            )]
+          ),
+          child: Row(
+            children: List.generate(
+                bottomNavItems.length,
+                    (index) => SizedBox(
+                      height: 36,
+                        width: 36,
+                      child: RiveAnimation.asset(bottomNavItems[index].rive.src),
+                    )),
+          )
+        ),
+      ),
+    );
   }
 }
