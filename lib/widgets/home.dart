@@ -15,13 +15,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: const SafeArea(
         child: Column(
           children: [
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 20, top: 70, bottom: 10),
+                  padding: EdgeInsets.only(left: 20, top: 70, bottom: 10),
                   child: Text(
                       "This is the left button",
                       style: TextStyle(
@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 40),
+              padding: EdgeInsets.only(top: 40),
               child: Center(
                 child: Text(
                         "Hi Brownies! How are you feeling today",
@@ -65,14 +65,14 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: SafeArea(
         child: Container(
           height: 56,
-          padding: EdgeInsets.all(12),
-          margin: EdgeInsets.symmetric(horizontal: 24, vertical: 5),
+          padding: const EdgeInsets.all(12),
+          margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 5),
           decoration: BoxDecoration(
             color: bottomNavBgColor.withOpacity(0.8),
-            borderRadius: BorderRadius.all(Radius.circular(24)),
+            borderRadius: const BorderRadius.all(Radius.circular(24)),
             boxShadow: [BoxShadow(
               color: bottomNavBgColor.withOpacity(0.3),
-              offset: Offset(0,20),
+              offset: const Offset(0,20),
               blurRadius: 20,
             )]
           ),

@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Lato',
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green.shade300)
       ),
-      home: LoginPage(),
+      home: const LoginPage(),
     );
   }
 }
